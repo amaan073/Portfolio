@@ -5,9 +5,6 @@
     --blue : #23a6d5;
 }
 
-* {
-  box-sizing: border-box;
-}
 
 body {
     font-family: 'Inter', sans-serif;
@@ -19,7 +16,7 @@ body {
 
 
 header {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -154,7 +151,7 @@ div.social {
 }
 
 div.social>a>img {
-    margin: 5px;
+    margin-right: 10px;
 }
 
 
@@ -391,137 +388,135 @@ input, textarea {
   }
 
 
-@media screen and (max-width: 500px) {
-  .navbar {
-    display: none;        
-  }
-
-  header {
-    max-width: 100%;
-    gap:0;
-    justify-content: space-between ;
-  }
-
-  header>h1 {
-    float: none;   
-    font-size: 1.5em;
-    margin-left: 0.5em;
-  }
-
-  .dropdownList {
-    display: block;
-  }
-
-
-  .dropdownList>div {
-    display: none;
-  }
-
-  .dropdownBtn {
-    display: block;
-    cursor: pointer;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    margin-top: 7px;
-    margin-right: 1.2em;
+  @media screen and (max-width: 500px) {
+    .navbar {
+      display: none;        
+    }
+  
+    header {
+      max-width: 100%;
+      gap:0;
+      justify-content: space-between ;
+    }
+  
+    header>h1 {
+      float: none;   
+      font-size: 1.5em;
+      margin-left: 0.5em;
+    }
+  
+    .dropdownList {
+      display: block;
+    }
+  
+  
+    .dropdownList>div {
+      display: none;
+    }
+  
+    .dropdownBtn {
+      display: block;
+      cursor: pointer;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      margin-top: 7px;
+      margin-right: 1.2em;
+      
+    }
+  
+    .dropdownBtn>svg {
+      width: 25px;
+      height: auto;
+    }
     
-  }
-
-  .dropdownBtn>svg {
-    width: 25px;
-    height: auto;
-  }
+    div#Home {
+      height: 125px;
+    }
   
-  div#Home {
-    height: 125px;
-  }
-
-  section.home {
-    flex-direction: column-reverse;
-    align-items: center
-  }
-
-  .pfp {
-    width: 70%;
-    margin: 0 auto;
-  }
-
-  .pfp>img {
-    width: 100%;
-    height:auto;
-  }
-
-  .intro {
-    text-align: center;
-  }
-
-  .intro>h1 {
-    font-size: 3em;
-  }
+    section.home {
+      flex-direction: column-reverse;
+      align-items: center
+    }
   
-  .intro>.social {
-    margin: 0;
+    .pfp {
+      width: 70%;
+      margin: 0 auto;
+    }
+  
+    .pfp>img {
+      width: 100%;
+      height:auto;
+    }
+  
+    .intro {
+      text-align: center;
+    }
+  
+    .intro>h1 {
+      font-size: 3em;
+    }
+    
+    .intro>.social {
+      margin: 0;
+    }
+  
+    div.social>a>img {
+      margin: 5px;
+      margin-top: 10px;
+    }
+  
+  
+    section.about>div {
+      flex-direction: column;
+      max-width: 100%;
+      gap: 80px;
+    }
+  
+    section.about>div>img {
+      width: 70%;
+      height: auto;
+    }
+  
+    .about_content {
+      max-width: 90%;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+  
+  
+    section.skills>div {
+      flex-direction: column-reverse;
+      gap: 3em;
+    }
+  
+    section.skills>div>div,section.skills>div>img {
+      width: 90%;
+    }
+  
+    section.projects {
+      flex-direction: column;
+      margin: 0;
+      width:100%;
+      align-items: center;
+    }
+  
+    section.projects>.project {
+      max-width: 90%; 
+    }
+  
+    .project>img,.project>h1,.project>p {
+      max-width: 100%;
+    }
+  
+  
+    section.contact {
+      width:100%;
+    }
+  
+    form {
+      max-width:80%;
+      margin: 0;
+    }
+  
   }
-
-  div.social>a>img {
-    margin: 5px;
-    margin-top: 10px;
-  }
-
-
-  section.about>div {
-    flex-direction: column;
-    max-width: 100%;
-    gap: 80px;
-  }
-
-  section.about>div>img {
-    width: 70%;
-    height: auto;
-  }
-
-  .about_content {
-    max-width: 90%;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-
-
-  section.skills>div {
-    flex-direction: column-reverse;
-    gap: 3em;
-  }
-
-  section.skills>div>div,section.skills>div>img {
-    width: 90%;
-  }
-
-  section.projects {
-    flex-direction: column;
-    margin: 0;
-    width:100%;
-    align-items: center;
-  }
-
-  section.projects>.project {
-    max-width: 90%; 
-  }
-
-  .project>img,.project>h1,.project>p {
-    max-width: 100%;
-  }
-
-
-  section.contact {
-    width:100%;
-  }
-
-  .form {
-    width:90%;
-  }
-
-  .form>input, .form>textarea {
-    width: 100%;
-  }
-}
