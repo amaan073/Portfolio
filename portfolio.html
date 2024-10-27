@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyPortfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/portfolio.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    
+    <header class="header">
+        <h1>Portfolio</h1>
+        <div class="navbar">
+            <span class="navbar-item" data-target="Home">Home</span>
+            <span class="navbar-item" data-target="About">About</span>
+            <span class="navbar-item" data-target="Skills">Skills</span>
+            <span class="navbar-item" data-target="Projects">Projects</span>
+            <span class="navbar-item" data-target="Contact">Contact</span>
+        </div> 
+
+        <div class="dropdownList">
+
+            <button class="dropdownBtn"><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-chevron-down">
+                <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+
+            <div>
+                <span data-target="Home">Home</span>
+                <span data-target="About">About</span>
+                <span data-target="Skills">Skills</span>
+                <span data-target="Projects">Projects</span>
+                <span data-target="Contact">Contact</span>
+            </div>
+            
+        </div>
+    </header>
+
+
+    <div id="Home"></div>  <!--compensating space for header at the top and also for focusing on home section-->
+
+
+    <section class="section home fade-in" >
+        <div class="intro">
+            <h1>Hi,</h1>
+            <h1>I'm <span>Amaan</span></h1>
+            <h1>Web Developer</h1>
+            <button id="contact" data-target="Contact">Contact</button>
+            <div class="social" >
+                <a href="https://www.linkedin.com/"><img src="images/linkedIn.png" alt="" height="20"></a>
+                <a href="https://www.github.com/"><img src="images/github.png" alt="" height="20"></div></a>
+            </div>
+
+        <div class="pfp"><img src="images/pfp_amaan.jpg" alt="profile pic" /></div>
+    </section>
+    
+
+    <!-- ABOUT -->
+    <h1 class="section_heading fade-in"  id="About">About</h1>
+    <section class="section about fade-in">
+        
+        <div>
+            <img src="./images/pfp_amaan2.png" alt="my profile pic" height="440"/>
+            <div class="about_content"> 
+                <h1>Hi I'm Amaan</h1>
+                <div>I've always been curious about technology and wanted to learn how to make software. Now, I'm working to become a full-stack web developer. I'm passionate about building innovative solutions that make a difference. I'm excited to share my projects and connect with others who share my passion.</div>
+                <hr>
+                <h1>Education</h1>
+                <p>Secondary Education passed with <b>87.83%</b></p>
+                <p>Senior Secondary Education passed with <b>87.2%</b></p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SKILLS-->
+    <h1 class="section_heading fade-in" id="Skills">Skills</h1>
+     <section  class="section skills fade-in" >
+        
+        <div>
+            <div>
+                <h1>Professional Skills</h1>
+                <p>Knowledgeable in JavaScript, HTML/CSS, and the MERN stack, with a strong understanding of MongoDB, Express, React, and Node.js. I'm excited to build and learn with these technologies, creating web applications that are fast, reliable, and easy to use.</p>
+                <div>
+
+                    <div class="language html">
+                        <img src="./images/html.png" alt="">
+                        <span>HTML</span>
+                        <span class="percentage">95%</span>
+                        <div class="line" style="width: 95%"></div>
+                    </div>
+
+                    <div class="language css">
+                        <img src="./images/css.png" alt="">
+                        <span>CSS</span>
+                        <span class="percentage">85%</span>
+                        <div class="line" style="width: 85%"></div>
+                    </div>
+
+                    <div class="language js">
+                        <img src="./images/js.png" alt="">
+                        <span>JavaScript</span>
+                        <span class="percentage">65%</span>
+                        <div class="line" style="width: 65%"></div>
+                    </div>
+                </div>
+            </div>
+            <img src="images/skills.jpg" alt="mern stack logos">
+        </div>
+     </section>
+
+
+
+
+     <!-- PROJECTS -->
+    <h1 class="section_heading fade-in" id="Projects">Projects</h1>
+    <section class="section projects fade-in">
+        <div class="project">
+            <img src="./images/blog.jpg"><div></div>
+            <h1>Blog Website</h1>
+            <p >The Blog Website is a simple static site made with Bootstrap. It has a responsive design that looks good on all devices. It features articles with images and short descriptions, making it easy to read and share on social media.</p>
+        </div>
+        <div class="project">
+            <img src="./images/blog.jpg"><div></div>
+            <h1>Blog Website</h1>
+            <p >The Blog Website is a simple static site made with Bootstrap. It has a responsive design that looks good on all devices. It features articles with images and short descriptions, making it easy to read and share on social media.</p>
+        </div>
+
+        <div class="project">
+            <img src="./images/blog.jpg"><div></div>
+            <h1>Blog Website</h1>
+            <p >The Blog Website is a simple static site made with Bootstrap. It has a responsive design that looks good on all devices. It features articles with images and short descriptions, making it easy to read and share on social media.</p>
+        </div>
+
+        <div class="project">
+            <img src="./images/blog.jpg"><div></div>
+            <h1>Blog Website</h1>
+            <p >The Blog Website is a simple static site made with Bootstrap. It has a responsive design that looks good on all devices. It features articles with images and short descriptions, making it easy to read and share on social media.</p>
+        </div>
+
+        <div class="project">
+            <img src="./images/blog.jpg"><div></div>
+            <h1>Blog Website</h1>
+            <p >The Blog Website is a simple static site made with Bootstrap. It has a responsive design that looks good on all devices. It features articles with images and short descriptions, making it easy to read and share on social media.</p>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- CONTACT -->
+    <h1 class="section_heading fade-in" id="Contact">Contact</h1>
+    <section class="section contact fade-in">
+        <form id="contactForm" onsubmit="sendEmail(event)"> 
+            <input type="text" name="name" id="name" placeholder="Your Name" required/>
+            <input type="email" name="email" id="email" placeholder="Your Email" required />
+            <textarea name="message" id="message" required></textarea>
+            <input type="submit" class="submit" value="Send Email">
+        </form>
+    </section>
+
+
+    <script>
+        function sendEmail(event) {
+            event.preventDefault(); //disable submit
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+    
+            // mailto email set
+            const mailtoLink = `mailto:amaankhanp2001@gmail.com?subject=Message from ${name}&body=${encodeURIComponent(message)}%0D%0A%0D%0AFrom: ${name} <${email}>`;
+    
+            //to open user's email service
+            window.location.href = mailtoLink;
+        }
+    </script>
+
+
+
+
+
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+        <h2><b>Amaan</b></h2>
+        <div>
+            <a href="https://www.facebook.com"><img src="./images/fb logo.png" height="20"></a>
+            <a href="https://instagram.com/"><img src="./images/insta.png" height="20"></a>
+            <a href="https://www.x.com/"><img src="./images/x logo.png" height="20"></a>
+        </div>
+        <p id="date" style="margin-top:20px;"></p>
+    </footer>
+
+
+
+
+    <script>
+        const currentYear = "® "  + new Date().getFullYear();
+        document.getElementById('date').innerText = currentYear;
+    </script>
+</body>
+</html>
