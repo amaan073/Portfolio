@@ -80,8 +80,42 @@ document.addEventListener('DOMContentLoaded', function() {
     //dropdown button function
 
     const dropdownBtn = document.querySelector(".dropdownBtn");
-    console.log(dropdownBtn)
+    const dropdownContent = document.querySelector(".dropdownContent");
+    let buttonCicked = false;
+    dropdownBtn.addEventListener("click",(e)=> {
+        
+        if(buttonCicked) {
+            //already clicked
+            
+            dropdownBtn.style.rotate = "0deg"
+            dropdownContent.classList.remove("dropdownBarOpen");
+            dropdownContent.classList.add("dropdownBarClose");
+
+            setTimeout(()=> {dropdownContent.style.display = "none";},300)
+            buttonCicked = false;
+        } else {
+            //not clicked
+            dropdownContent.style.display = "block";
+            dropdownBtn.style.rotate = "180deg"
+
+            dropdownContent.classList.remove("dropdownBarClose");
+            dropdownContent.classList.add("dropdownBarOpen");
+            buttonCicked = true;
+        }
+
+    });
+
+    var dropdownItems = document.querySelectorAll(".dropdownContent>div");
+
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-target');
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
 });
 
-
-
+    

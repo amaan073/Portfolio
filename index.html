@@ -39,12 +39,12 @@
                 </svg>
             </button>
 
-            <div>
-                <span data-target="Home">Home</span>
-                <span data-target="About">About</span>
-                <span data-target="Skills">Skills</span>
-                <span data-target="Projects">Projects</span>
-                <span data-target="Contact">Contact</span>
+            <div class="dropdownContent">
+                <div data-target="Home">Home</div>
+                <div data-target="About">About</div>
+                <div data-target="Skills">Skills</div> 
+                <div data-target="Projects">Projects</div>
+                <div data-target="Contact">Contact</div>
             </div>
             
         </div>
@@ -61,8 +61,8 @@
             <h1>Web Developer</h1>
             <button id="contact" data-target="Contact">Contact</button>
             <div class="social" >
-                <a href="https://www.linkedin.com/"><img src="images/linkedIn.png" alt="" height="20"></a>
-                <a href="https://www.github.com/"><img src="images/github.png" alt="" height="20"></a>
+                <a href="https://www.linkedin.com/in/amaan-khan-8b9780335"><img src="images/linkedIn.png" alt="" height="20"></a>
+                <a href="https://github.com/amaan073"><img src="images/github.png" alt="" height="20"></a>
             </div> 
         </div>
 
@@ -75,7 +75,6 @@
     <section class="section about fade-in">
         
         <div>
-            <img src="./images/pfp_amaan2.png" alt="my profile pic" height="440"/>
             <div class="about_content"> 
                 <h1>Hi I'm Amaan</h1>
                 <div>I've always been curious about technology and wanted to learn how to make software. Now, I'm working to become a full-stack web developer. I'm passionate about building innovative solutions that make a difference. I'm excited to share my projects and connect with others who share my passion.</div>
@@ -179,15 +178,15 @@
 
     <script>
         function sendEmail(event) {
-            event.preventDefault(); //disable submit
+            event.preventDefault(); //disable default submission
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
     
             // mailto email set
-            const mailtoLink = `mailto:amaankhanp2001@gmail.com?subject=Message from ${name}&body=${encodeURIComponent(message)}%0D%0A%0D%0AFrom: ${name} <${email}>`;
+            const mailtoLink = `mailto:amaankhanp2001@gmail.com?subject=Message from ${name}&body=${encodeURIComponent(message)}%0D%0A%0D%0AFrom:<${email}>`;
     
-            //to open user's email service
+            //to open mailto link
             window.location.href = mailtoLink;
         }
     </script>
@@ -200,7 +199,7 @@
 
 
     <!-- FOOTER -->
-<!-- 
+    <!-- 
     <footer class="footer">
         <h2><b>Amaan</b></h2>
         <div>
@@ -211,12 +210,12 @@
         <p id="date" style="margin-top:20px;"></p>
     </footer>
 
-
-
-
     <script>
         const currentYear = "® "  + new Date().getFullYear();
         document.getElementById('date').innerText = currentYear;
     </script> -->
+
+
+
 </body>
 </html>
