@@ -262,12 +262,12 @@ div.language {
     height: auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 7%;
 }
 
 .project {
-    max-width: 25%;
-    min-width: 10%;
+    width: 300px;
     background-color: #f7f7f7;
     padding: 20px;
     border: 1px solid #ddd;
@@ -277,7 +277,7 @@ div.language {
   }
   
   .project>img {
-    width: 300px;
+    width: 100%;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
   }
@@ -302,7 +302,7 @@ div.language {
     font-size: 16px;
     color: #666;
     margin-bottom: 0;
-    width: 300px;
+    width: 100%;
   }
 
   section.contact {

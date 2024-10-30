@@ -57,10 +57,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if(entry.isIntersecting) {
                 let targetName = entry.target.classList[1];
                 targetName = targetName.charAt(0).toUpperCase() + targetName.slice(1);
+
                 const targetLink = document.querySelector(`[data-target="${targetName}"]`)  //selects the navbar item with the value of targetName
                 
                 if (currentActiveLink) {
-                    currentActiveLink.classList.remove('underline');
+                    currentActiveLink.classList.remove('underline');  //to remove the previous underline applied to navbar item
                 }
 
 
