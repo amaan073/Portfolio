@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +50,7 @@
     </header>
 
 
-    <div id="Home"></div>  <!--compensating space for header at the top and also for focusing on home section-->
+    <div id="Home"></div>  
 
 
     <section class="section home fade-in" >
@@ -129,31 +128,35 @@
      <!-- PROJECTS -->
     <h1 class="section_heading fade-in" id="Projects">Projects</h1>
     <section class="section projects fade-in">
+        
         <div class="project">
-            <img src="./images/blog.jpg"><div></div>
+            <img src="./images/Blog-Project.png">
             <h1>Blog Website</h1>
-            <p >The Blog Website is a simple static site made with Bootstrap. It has a responsive design that looks good on all devices. It features articles with images and short descriptions, making it easy to read and share on social media.</p>
+            <p >The Blog Website is a simple static site made with Bootstrap. It has a responsive design that looks good on all devices. It features articles with images and short descriptions, making it easy to read and share on social media.
+                <a href="https://amaan073.github.io/Blog-Project/" target="_blank">View Project</a>
+            </p>
         </div>
+
         <div class="project">
-            <img src="./images/blog.jpg"><div></div>
+            <img src="./images/blog.jpg">
             <h1>Blog Website</h1>
             <p >The Blog Website is a simple static site made with Bootstrap. It has a responsive design that looks good on all devices. It features articles with images and short descriptions, making it easy to read and share on social media.</p>
         </div>
 
         <div class="project">
-            <img src="./images/blog.jpg"><div></div>
+            <img src="./images/blog.jpg">
             <h1>Blog Website</h1>
             <p >The Blog Website is a simple static site made with Bootstrap. It has a responsive design that looks good on all devices. It features articles with images and short descriptions, making it easy to read and share on social media.</p>
         </div>
 
         <div class="project">
-            <img src="./images/blog.jpg"><div></div>
+            <img src="./images/blog.jpg">
             <h1>Blog Website</h1>
             <p >The Blog Website is a simple static site made with Bootstrap. It has a responsive design that looks good on all devices. It features articles with images and short descriptions, making it easy to read and share on social media.</p>
         </div>
 
         <div class="project">
-            <img src="./images/blog.jpg"><div></div>
+            <img src="./images/blog.jpg">
             <h1>Blog Website</h1>
             <p >The Blog Website is a simple static site made with Bootstrap. It has a responsive design that looks good on all devices. It features articles with images and short descriptions, making it easy to read and share on social media.</p>
         </div>
@@ -178,15 +181,15 @@
 
     <script>
         function sendEmail(event) {
-            event.preventDefault(); //disable default submission
+            event.preventDefault(); 
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
     
-            // mailto email set
+            
             const mailtoLink = `mailto:amaankhanp2001@gmail.com?subject=Message from ${name}&body=${encodeURIComponent(message)}%0D%0A%0D%0AFrom:<${email}>`;
     
-            //to open mailto link
+            
             window.location.href = mailtoLink;
         }
     </script>
