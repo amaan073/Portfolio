@@ -5,39 +5,45 @@
     --blue : #23a6d5;
 }
 
+* {
+  box-sizing: border-box;
+}
 
 body {
     font-family: 'Inter', sans-serif;
-    margin: 0 ;
+    margin: 0;
     padding: 0;
     color: var(--black);
     background-color: rgb(254, 254, 254);
 }
 
-
 header {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 262px;
-    position: fixed;
-    z-index: 1;
-    background-color: white;
-    border-bottom: 3px solid rgba(230, 225, 225, 0.322);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-bottom: 3px solid rgba(230, 225, 225, 0.322);
+  position: fixed;
+  z-index: 1;
 }
 
-header>h1 {
+header>div {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header>div>h1 {
     font-size: 26px;
-    font-weight: 700;
-    float: left;
     margin: 15px 0;
     padding: 0;
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 5s ease infinite;
-    /* this below is for removing the background and show the color on the text only */
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -58,7 +64,6 @@ header>h1 {
 
 .navbar {
     display: flex;
-    justify-content: right;
     gap: 2.5rem;
 }
 
@@ -80,18 +85,22 @@ header>h1 {
 
 div#Home {
     height: 150px;           
-    /* compensation div for header space */
+    /*to fix scroll into home section issue and for header covering 65px of space*/
 }
 
 
 section {
     width: 100%;
+    max-width: 1100px;
     margin-bottom: 35px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 20px;
 }
 
 section.home {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-bottom: 65px ;
 }
 
@@ -106,9 +115,7 @@ section.home {
     text-decoration-thickness: 4px; 
     text-underline-offset: 5px; 
 
-    /* THIS padding is for scrollinto view feature to fix the header covering the heading we have to increasing padding of the heading so when the scrollintoview
-    happnes. the header coverrs the paddig and the heading is left out.  so which allow us to see the heading */
-    padding-top: 65px;
+    padding-top: 65px;  /*padding for scroll into view feature*/
 }
 
 
@@ -120,8 +127,7 @@ section.home {
 .intro>h1 {
     font-size: 60px;
     margin: 0;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin: 15px 0;
 }
 
 .intro>h1>span {
@@ -139,17 +145,15 @@ button#contact {
     font-weight: bold;
     margin: 15px 0;
     cursor: pointer;
-    border: 2px solid var(--blue);
+    transition: all 0.3s ease;
 }
 
 button#contact:hover {
-  background-color: white;
-  color: var(--blue);
+  background-color: #16556c;
 }
 
 div.social {
     margin-top: 50px;
-   
 }
 
 div.social>a>img {
@@ -161,7 +165,6 @@ div.social>a>img {
     width: auto;
     height: 440px;
     mix-blend-mode: multiply;
-    
 }
 
 
@@ -170,12 +173,9 @@ div.social>a>img {
 section.about {
   display: flex;
   justify-content: center;
-  width: 100%;
 }
 
-.about > div > img {
-    border-radius: 10px; 
-}
+
 
 .about_content {
   text-align: center;
@@ -186,15 +186,15 @@ hr {
     width: 40px;
     border: none;
     height: 15px; 
-    background-image: radial-gradient(gray 30%, transparent 30%);
+    background-image: radial-gradient(gray 30%, transparent 30%);  
     background-size: 15px 15px; 
-    background-repeat: repeat-x;
-    color: #eee; 
+    background-repeat: repeat-x; 
     margin: 20px auto;
 }
 
 section.about>div {
-    width: 30%;
+    width: 100%;
+    max-width: 530px;
     justify-items: center;
     margin-bottom: 40px;
 }
@@ -202,18 +202,18 @@ section.about>div {
 
 .skills>div {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 70px;
 }
 
 .skills>div>div {
-    width: 500px ;
+    width: 50%;  
 }
 
 .skills>div>img {
-    min-width: 200px;
-    max-width: 500px;
+    width: 50%;
+    max-width: 530px;
     border-radius: 10px;
 }
 
@@ -258,41 +258,42 @@ div.language {
 
 .projects {
     margin: 0 auto;
-    width: 80%;
-    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 7%;
 }
 
-.projects>a {
-  text-decoration :none;
-  color: var(--black);
-}
 
 .project {
     width: 300px;
+    min-height: 360px;
     background-color: #f7f7f7;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .project:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);;
   }
 
 
   
   .project>img {
     width: 100%;
-    height: 50%;
+    height: 45%;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
   }
   
 
   .project>h1 {
-
     margin-top: 10px;
     font-size: 24px;
     font-weight: bold;
@@ -309,70 +310,48 @@ div.language {
     width: 100%;
     display: flex;
     justify-content: center;
-    box-sizing: border-box;
   }
 
   form {
-    max-width: 15%; /* You can adjust this as needed */
-    min-width: 10%;
-    margin: 0 auto;
-    box-sizing: border-box; /* Ensure padding and border are included in width */
+    width: 95%;
+    max-width: 425px;
 }
 
-input, textarea {
-    width: 100%; /* Ensures input fields take full width of the form */
+  input, textarea {
+    width: 100%; 
     padding: 12px;
     border: 2px solid black;
     border-radius: 5px;
     margin: 12px 0;
     font-weight: bold;
-    box-sizing: border-box; /* Include padding and border in width */
-}
+  }
 
   textarea {
-    height: 150px;
+    height: 200px;
   }
 
   input[type="submit"] {
     border: none;
     background-color: var(--blue);
     color: white;
-    padding: 7px 0;
+    padding: 10px 0;
     width: 105px;
     border-radius: 3px;
     font-family: "Inter";
     font-weight: bold;
     margin: 15px 0;
-    position: relative;
     float: right;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
-    border: 3px solid var(--blue);
   }
 
   .submit:hover {
-    color: var(--blue);
-    background-color: white;
-    border: 3px solid var(--blue);
+    background-color: #16556c;
   }
 
 
-  footer {
-    text-align: center;
-    padding: 15px 0;
-    background-color: rgb(5, 5, 33);
-    color: white;
 
-  }
-
-  footer>div>a>img {
-    margin: 0 15px;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-
-
-  /* Animation */
+  /*scroll Animation */
   .fade-in {
     opacity: 0;
     transition: opacity 1s ease-in;
@@ -393,21 +372,9 @@ input, textarea {
 
   
 
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 768px) {
     .navbar {
       display: none;        
-    }
-  
-    header {
-      max-width: 100%;
-      gap:0;
-      justify-content: space-between ;
-    }
-  
-    header>h1 {
-      float: none;   
-      font-size: 1.5em;
-      margin-left: 0.5em;
     }
   
     .dropdownList {
@@ -424,8 +391,7 @@ input, textarea {
       z-index: 1;
       border-radius: 5px;
       margin-top: 5px;
-      
-  }
+    }
 
     .dropdownBarOpen {
       animation: fadeIn 0.3s;
@@ -435,20 +401,6 @@ input, textarea {
       animation: fadeOut 0.3s;
     }
 
-  .dropdownContent div {
-      color: black; 
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      cursor: pointer;
-      transition: background-color 0.3s;
-
-  }
-
-  .dropdownContent div:active {
-    color: var(--blue);
-  }
-  
   /* Animation for dropdown */
   @keyframes fadeIn {
       from {
@@ -472,6 +424,19 @@ input, textarea {
     }
 }
 
+  .dropdownContent div {
+      color: black; 
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+
+  .dropdownContent div:active {
+    color: var(--blue);
+  }
+  
 
     .dropdownBtn {
       display: block;
@@ -480,7 +445,6 @@ input, textarea {
       border: none;
       background-color: transparent;
       margin-top: 7px;
-      margin-right: 1.2em;
     }
 
     
@@ -500,12 +464,16 @@ input, textarea {
     }
   
     .pfp {
-      width: 70%;
+      width: 60%;
       margin: 0 auto;
+      display: flex;
+      justify-content: center;
     }
   
     .pfp>img {
       width: 100%;
+      min-width: 250px;
+      max-width: 320px;
       height:auto;
     }
   
@@ -514,7 +482,7 @@ input, textarea {
     }
   
     .intro>h1 {
-      font-size: 3em;
+      font-size: clamp(2.4em, 7vw,3.4em);
     }
     
     .intro>.social {
@@ -528,18 +496,10 @@ input, textarea {
   
   
     section.about>div {
-      flex-direction: column;
       width: 100%;
-      gap: 80px;
-    }
-  
-    section.about>div>img {
-      width: 70%;
-      height: auto;
     }
   
     .about_content {
-      max-width: 90%;
       word-wrap: break-word;
       overflow-wrap: break-word;
     }
@@ -569,14 +529,22 @@ input, textarea {
       max-width: 100%;
     }
   
-  
-    section.contact {
-      width:100%;
+  }
+
+
+
+  @media screen and (min-width: 660px) and (max-width: 768px) {
+    .project {
+      width: 40%;
+      min-height: 380px;
+      min-width: 305px;
+      margin-left: 20px;
+      margin-right: 20px;
     }
-  
-    form {
-      max-width:80%;
-      margin: 0;
+
+    section.projects {
+      flex-direction: row;
+      padding: 0;
+      gap: 0;
     }
-  
   }

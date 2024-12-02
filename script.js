@@ -1,53 +1,50 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    const navbarItems = document.querySelectorAll('.navbar-item');
 
+    //navbar
+    const navbarItems = document.querySelectorAll('.navbar-item');
     navbarItems.forEach(item => {
         item.addEventListener('click', function() {
             const targetId = this.getAttribute('data-target');
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-            }
+            const targetDiv = document.getElementById(targetId);
+            targetDiv.scrollIntoView({ behavior: 'smooth' });
         });
     });
 
+
+
+
+    //contactButton
     const contactBtn = document.getElementById("contact");
     contactBtn.addEventListener('click', function() {
-        const targetId = this.getAttribute('data-target');
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-            targetSection.scrollIntoView({ behavior: 'smooth' });
-        }
+        const contactSection = document.getElementById("Contact");
+        contactSection.scrollIntoView({ behavior: 'smooth' });
     });
 
 
 
 
-    //FADE IN ANIMATION
-
-
+    // section FADE IN ANIMATION
     const fadeInElements = document.querySelectorAll('.fade-in');
     
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
+                observer.unobserve(entry.target);     //unobserved the element so the callback doesnt fire again when the element intersect, like in navbar observer function where there is no use of unobserve() function so the underline effect apply to same navlink again and again
             }
         });
     },{
-        threshold: 0.25   //for the animation to only happen when we reach 25% across the target div
+        threshold: 0.25   
     });
-
-    //applying the observer function to all the elements to we want to applly the animation
     fadeInElements.forEach(element => {
         observer.observe(element);
     });
 
 
-    //for responsive navbar menu
 
+    
+    //for responsive navbar menu
     const sections = document.querySelectorAll("section");
 
     let currentActiveLink = null;
@@ -58,10 +55,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 let targetName = entry.target.classList[1];
                 targetName = targetName.charAt(0).toUpperCase() + targetName.slice(1);
 
-                const targetLink = document.querySelector(`[data-target="${targetName}"]`)  //selects the navbar item with the value of targetName
+                const targetLink = document.querySelector(`[data-target="${targetName}"]`)  
                 
                 if (currentActiveLink) {
-                    currentActiveLink.classList.remove('underline');  //to remove the previous underline applied to navbar item
+                    currentActiveLink.classList.remove('underline');  
                 }
 
 
@@ -72,14 +69,15 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         })
     });
-
     sections.forEach((section) => {
         observerForNavbar.observe(section);
     })
 
 
-    //dropdown button function
 
+
+
+    //dropdown button function
     const dropdownBtn = document.querySelector(".dropdownBtn");
     const dropdownContent = document.querySelector(".dropdownContent");
     let buttonCicked = false;
@@ -87,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if(buttonCicked) {
             //already clicked
-            
             dropdownBtn.style.rotate = "0deg"
             dropdownContent.classList.remove("dropdownBarOpen");
             dropdownContent.classList.add("dropdownBarClose");
@@ -106,17 +103,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
     });
 
-    var dropdownItems = document.querySelectorAll(".dropdownContent>div");
 
+
+    var dropdownItems = document.querySelectorAll(".dropdownContent>div");
     dropdownItems.forEach(item => {
         item.addEventListener('click', function() {
             const targetId = this.getAttribute('data-target');
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-            }
+            const targetDiv = document.getElementById(targetId);
+            targetDiv.scrollIntoView({ behavior: 'smooth' });
         });
     });
+    
+
+
+
+
+    
+    //For projects links
+    const projects = document.querySelectorAll(".project");
+
+    const blogProject = projects[0];
+    const todoList = projects[1];
+
+    blogProject.addEventListener("click",()=> {window.open('https://amaan073.github.io/Blog-Project/index.html', '_blank')});
+    todoList.addEventListener("click",()=> {window.open('https://amaan073.github.io/TodoList/', '_blank')});
+
+    
 });
 
     
+
+

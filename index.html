@@ -12,40 +12,29 @@
 <body>
     
     <header class="header">
-        <h1>Portfolio</h1>
-        <div class="navbar">
-            <span class="navbar-item" data-target="Home">Home</span>
-            <span class="navbar-item" data-target="About">About</span>
-            <span class="navbar-item" data-target="Skills">Skills</span>
-            <span class="navbar-item" data-target="Projects">Projects</span>
-            <span class="navbar-item" data-target="Contact">Contact</span>
-        </div> 
+        <div>
+            <h1>Portfolio</h1>
+            <div class="navbar">
+                <span class="navbar-item" data-target="Home">Home</span>
+                <span class="navbar-item" data-target="About">About</span>
+                <span class="navbar-item" data-target="Skills">Skills</span>
+                <span class="navbar-item" data-target="Projects">Projects</span>
+                <span class="navbar-item" data-target="Contact">Contact</span>
+            </div> 
 
-        <div class="dropdownList">
+            <div class="dropdownList">
+                <button class="dropdownBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
 
-            <button class="dropdownBtn"><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-chevron-down">
-                <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-            </button>
-
-            <div class="dropdownContent">
-                <div data-target="Home">Home</div>
-                <div data-target="About">About</div>
-                <div data-target="Skills">Skills</div> 
-                <div data-target="Projects">Projects</div>
-                <div data-target="Contact">Contact</div>
+                <div class="dropdownContent">
+                    <div data-target="Home">Home</div>
+                    <div data-target="About">About</div>
+                    <div data-target="Skills">Skills</div> 
+                    <div data-target="Projects">Projects</div>
+                    <div data-target="Contact">Contact</div>
+                </div>  
             </div>
-            
         </div>
     </header>
 
@@ -58,7 +47,7 @@
             <h1>Hi,</h1>
             <h1>I'm <span>Amaan</span></h1>
             <h1>Web Developer</h1>
-            <button id="contact" data-target="Contact">Contact</button>
+            <button id="contact">Contact</button>
             <div class="social" >
                 <a href="https://www.linkedin.com/in/amaan-khan-8b9780335"><img src="images/linkedIn.png" alt="" height="20"></a>
                 <a href="https://github.com/amaan073"><img src="images/github.png" alt="" height="20"></a>
@@ -72,7 +61,6 @@
     <!-- ABOUT -->
     <h1 class="section_heading fade-in"  id="About">About</h1>
     <section class="section about fade-in">
-        
         <div>
             <div class="about_content"> 
                 <h1>Hi I'm Amaan</h1>
@@ -132,16 +120,13 @@
         <div class="project">
             <img src="./images/Blog-Project.png">
             <h1>Blog Website</h1>
-            <p >The Blog Website is a simple static site made with Bootstrap. It has a responsive design that looks good on all devices. It features articles with images and short descriptions, making it easy to read and share. 
-                <a href="https://amaan073.github.io/Blog-Project/index.html" target="_blank">View Project</a>
-            </p>
+            <p >The Blog Website is a simple static site made with Bootstrap. It has a responsive design that looks good on all devices. It features articles with images and short descriptions, making it easy to read and share. </p>
         </div>
 
         <div class="project">
             <img src="./images/ToDoList.png">
             <h1>TodoList App</h1>
-            <p >The Todo List App is a simple static website that helps users manage tasks efficiently. With features to add, check off, and delete tasks, it offers an intuitive interface for organizing daily activities. Keep track of your to-dos .</p>
-            <a href="https://amaan073.github.io/TodoList/" target="_blank">View Project</a>
+            <p >The Todo List App is a simple static website that helps users manage tasks efficiently. With features to add, check off, and delete tasks, it offers an intuitive interface for organizing daily activities. </p>
         </div>
 
         <div class="project">
@@ -188,7 +173,7 @@
             const message = document.getElementById('message').value;
     
             
-            const mailtoLink = `mailto:amaankhanp2001@gmail.com?subject=Message from ${name}&body=${encodeURIComponent(message)}%0D%0A%0D%0AFrom:<${email}>`;
+            const mailLink = `mailto:amaankhanp2001@gmail.com?subject=Message from ${name}&body=${encodeURIComponent(message)}%0D%0A%0D%0AFrom:<${email}>`;
     
             
             window.location.href = mailtoLink;
