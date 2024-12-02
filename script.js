@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     },{
-        threshold: 0.25   
+        threshold: 0.125  
     });
     fadeInElements.forEach(element => {
         observer.observe(element);
